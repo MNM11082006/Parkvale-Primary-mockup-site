@@ -687,83 +687,199 @@ form textarea {
 /* MOBILE FIXES - WON'T AFFECT DESKTOP */
 /* ========================================= */
 
-/* --- MOBILE FIXES --- */
+/* ===========================
+   MOBILE: 768px and below
+   (Replace your existing max-width:768px block with this)
+   =========================== */
 @media (max-width: 768px) {
 
-    /* Keep menu readable */
+    /* Menu: keep items on one row, allow horizontal scroll on very small screens */
+    #menu {
+        height: auto;
+        padding: 8px 10px;
+    }
+
     #menu ul {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
+        display: flex;
+        flex-direction: row;    /* keep in one row */
+        flex-wrap: nowrap;      /* prevent wrapping to multiple lines */
+        gap: 8px;
+        margin: 0;
+        padding: 8px 10px;
+        overflow-x: auto;       /* allow swipe scrolling */
+        -webkit-overflow-scrolling: touch;
+        align-items: center;
+        justify-content: flex-start;
     }
 
-    #menu ul li {
-        display: block;
-        margin: 5px 0;
+    /* remove big horizontal list margins on mobile */
+    #menu li {
+        margin: 0;
+        list-style: none;
     }
 
-    /* Header text resizing */
+    /* keep links compact and prevent wrapping */
+    #menu a {
+        display: inline-block;
+        padding: 8px 12px;
+        font-size: 14px;
+        white-space: nowrap;
+        border-radius: 6px;
+    }
+
+    #menu a:hover,
+    #menu a.active {
+        background-color: #16314c; /* slightly darker for tap feedback */
+    }
+
+    /* Header: reduce padding/font-size so it doesn't dominate small screens */
+    #header {
+        padding: 30px 14px 20px 14px;
+    }
+
     #header h1 {
-        font-size: 24px;
-        text-align: center;
+        font-size: 28px;
+        letter-spacing: 1px;
     }
 
     #header h3 {
         font-size: 16px;
-        text-align: center;
+        margin-top: 8px;
     }
 
-    /* Make banner image fit */
+    /* Banner: make height automatic so image isn't cropped awkwardly */
     #banner img {
         width: 100%;
         height: auto;
-    }
-
-    /* PAGE LAYOUT — stack content + sidebar */
-    #page {
+        object-fit: cover;
         display: block;
-        width: 100%;
+        max-height: 260px;
     }
 
-    #content, 
-    #sidebar {
-        width: 100% !important;
-        padding: 0 15px;
-        margin: 0;
-    }
-
-    /* News grid responsive */
-    .news-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    /* Gallery grid responsive */
-    .photo-grid {
-        grid-template-columns: 1fr;
+    /* Page stacking and spacing */
+    #page {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 12px;
         gap: 20px;
     }
 
-    .photo-item img {
+    #content,
+    #sidebar {
         width: 100%;
-        height: auto;
-        border-radius: 5px;
+        padding: 14px;
+        margin: 0;
     }
 
-    /* Sidebar lists */
+    /* Make card-like things full-width but keep max width for readability */
+    .vehicle-card,
+    .grade-card,
+    .photo-item,
+    .news-item {
+        width: 100%;
+        max-width: 720px;
+    }
+
+    /* News grid becomes single column for readability */
+    .news-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    /* Photo grid and grade-levels: single column */
+    .photo-grid,
+    .grade-levels {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    /* Process steps stack vertically */
+    .process-steps {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        align-items: stretch;
+    }
+    .step {
+        width: 100%;
+    }
+
+    /* Sidebar lists spacing */
     #sidebar ul.styled li {
-        margin-bottom: 10px;
+        padding: 12px 0;
     }
 
-    /* Footer stacks */
+    /* Footer stacks vertically and centers text */
     #footer {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        padding: 28px 12px;
         text-align: center;
     }
 
-    #footer > div {
+    #footer div {
         width: 100%;
-        margin-bottom: 20px;
+        margin: 0 auto;
+    }
+
+    /* copyright */
+    #copyright {
+        padding: 16px 10px;
+        font-size: 13px;
+    }
+
+    /* Make forms and inputs fit nicely */
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="tel"],
+    form select,
+    form textarea {
+        font-size: 15px;
+    }
+
+    /* reduce some shadows and spacing a bit for small screens */
+    #content, #sidebar {
+        box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+        border-radius: 10px;
+    }
+}
+
+/* ===========================
+   SMALL MOBILE: 480px and below
+   (Replace your existing max-width:480px block with this)
+   =========================== */
+@media (max-width: 480px) {
+
+    /* header text smaller */
+    #header h1 {
+        font-size: 22px;
+    }
+
+    #header h3 {
+        font-size: 14px;
+    }
+
+    /* banner height slightly smaller on tiny phones */
+    #banner img {
+        max-height: 200px;
+    }
+
+    /* menu links slightly smaller and tighter */
+    #menu a {
+        font-size: 13px;
+        padding: 7px 10px;
+    }
+
+    /* contact textarea min height reduced so it fits */
+    form textarea {
+        min-height: 100px;
+    }
+
+    /* more compact footer */
+    #footer {
+        padding: 20px 10px;
     }
 }

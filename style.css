@@ -1,0 +1,766 @@
+/* Reset and base styles - SAME APPROACH */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+p {
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+/* Menu - SAME STRUCTURE, DIFFERENT COLORS */
+#menu {
+    background-color: #2c5aa0;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#menu li {
+    margin: 0 20px;
+}
+
+#menu a {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 10px 20px;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+#menu a:hover,
+#menu a.active {
+    background-color: #1a3a5f;
+    color: #fff;
+}
+
+/* Header - SAME STRUCTURE, DIFFERENT COLORS */
+#header {
+    text-align: center;
+    padding: 80px 20px 40px 20px;
+    background: linear-gradient(to right, #2c5aa0, #4a7bc8);
+    color: white;
+}
+
+#header h1 {
+    font-size: 48px;
+    letter-spacing: 2px;
+}
+
+#header h3 {
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+/* Banner - SAME STRUCTURE */
+#banner {
+    width: 100%;
+    overflow: hidden;
+}
+
+#banner img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+/* Page Layout - SAME STRUCTURE */
+#page {
+    display: flex;
+    padding: 40px 20px;
+    gap: 40px;
+}
+
+#content {
+    flex: 3;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+#sidebar {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* Content Headings */
+#content h2 {
+    color: #2c5aa0;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* News Grid - NEW CONTENT, SIMILAR LAYOUT TO OLD VEHICLE CARDS */
+.news-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.news-item {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+}
+
+.news-item h3 {
+    color: #2c5aa0;
+    margin-bottom: 10px;
+}
+
+/* Lists */
+ul.styled {
+    list-style: none;
+    padding: 0;
+}
+
+ul.styled li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Footer - SAME STRUCTURE */
+#footer {
+    display: flex;
+    gap: 20px;
+    background-color: #1a3a5f;
+    color: #fff;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+#footer div {
+    flex: 1;
+}
+
+#footer h2 {
+    color: #4a7bc8;
+    margin-bottom: 15px;
+}
+
+#footer p {
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+#footer a {
+    color: #fff;
+}
+
+#footer a:hover {
+    color: #4a7bc8;
+}
+
+/* Copyright */
+#copyright {
+    text-align: center;
+    background-color: #2c5aa0;
+    color: #fff;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* Sidebar */
+#sidebar h2 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+#sidebar ul.styled li a {
+    color: #333;
+}
+
+#sidebar ul.styled li a:hover {
+    color: #2c5aa0;
+}
+
+/* Additional styles for About page */
+
+/* Back button style */
+.back-button {
+    display: inline-block;
+    background-color: #2c5aa0;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #1a3a5f;
+}
+
+/* Achievement items */
+.achievement-item {
+    background-color: #f0f7ff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border-left: 4px solid #2c5aa0;
+}
+
+.achievement-item p {
+    margin: 0;
+    color: #333;
+}
+
+.achievement-item strong {
+    color: #2c5aa0;
+}
+
+/* Content list styles */
+#content ul {
+    padding-left: 20px;
+}
+
+#content ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Additional styles for Admissions page */
+
+/* Grade Levels Grid - Similar to old vehicle cards */
+.grade-levels {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.grade-card {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #eaeaea;
+}
+
+.grade-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.grade-card h3 {
+    color: #2c5aa0;
+    margin: 15px 0 10px 0;
+    font-size: 20px;
+}
+
+.grade-card p {
+    color: #666;
+    margin-bottom: 15px;
+    padding: 0 15px;
+    line-height: 1.5;
+}
+
+.grade-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Admissions Process Steps */
+.process-steps {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.step {
+    background: linear-gradient(to bottom, #2c5aa0, #4a7bc8);
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.step h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.step p {
+    color: #f0f0f0;
+    line-height: 1.5;
+}
+
+/* Documents List */
+.documents-list {
+    background-color: #f0f7ff;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #2c5aa0;
+}
+
+.documents-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #d1e3ff;
+}
+
+.documents-list li:last-child {
+    border-bottom: none;
+}
+
+/* Date Items */
+.date-item {
+    background-color: #fff;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border-left: 3px solid #2c5aa0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.date-item p {
+    margin: 0;
+    color: #333;
+}
+
+.date-item strong {
+    color: #2c5aa0;
+}
+
+/* Admissions Contact Box */
+.admissions-contact {
+    background: linear-gradient(to right, #2c5aa0, #4a7bc8);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.admissions-contact h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.admissions-contact p {
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+/* Additional styles for Gallery page */
+
+/* Gallery Categories */
+.gallery-category {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eaeaea;
+}
+
+.gallery-category h3 {
+    color: #2c5aa0;
+    margin-bottom: 20px;
+    font-size: 22px;
+    padding-left: 10px;
+    border-left: 4px solid #2c5aa0;
+}
+
+/* Photo Grid - Similar to old vehicle gallery */
+.photo-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.photo-item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #eaeaea;
+}
+
+.photo-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.photo-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.photo-item p {
+    padding: 15px;
+    margin: 0;
+    color: #555;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-top: 1px solid #eaeaea;
+}
+
+/* Album Items in Sidebar */
+.album-item {
+    background-color: #f0f7ff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border-left: 3px solid #2c5aa0;
+    transition: background-color 0.3s;
+}
+
+.album-item:hover {
+    background-color: #e1eeff;
+}
+
+.album-item h4 {
+    color: #2c5aa0;
+    margin: 0 0 8px 0;
+    font-size: 16px;
+}
+
+.album-item p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Gallery Info Box */
+.gallery-info {
+    background: linear-gradient(to right, #2c5aa0, #4a7bc8);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.gallery-info h2 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.gallery-info p {
+    color: #f0f0f0;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.gallery-info strong {
+    color: white;
+}
+
+/* Active state for gallery categories */
+#sidebar ul.styled li a.active {
+    color: #2c5aa0;
+    font-weight: bold;
+    background-color: #f0f7ff;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+/* Additional styles for Contact page */
+
+/* Contact Details */
+#contact-details {
+    background-color: #f0f7ff;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 4px solid #2c5aa0;
+}
+
+#contact-details h3 {
+    color: #2c5aa0;
+    margin-bottom: 15px;
+}
+
+ul.style1 {
+    list-style: none;
+    padding: 0;
+}
+
+ul.style1 li {
+    padding: 12px 0;
+    border-bottom: 1px solid #d1e3ff;
+    font-size: 16px;
+}
+
+ul.style1 li:last-child {
+    border-bottom: none;
+}
+
+ul.style1 li strong {
+    color: #2c5aa0;
+}
+
+/* Location Map */
+.location-map {
+    margin-bottom: 40px;
+}
+
+.location-map h3 {
+    color: #2c5aa0;
+    margin-bottom: 15px;
+}
+
+.map-placeholder {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #eaeaea;
+}
+
+.map-placeholder img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.map-placeholder p {
+    text-align: center;
+    padding: 15px;
+    margin: 0;
+    color: #666;
+    background-color: #fff;
+}
+
+/* Contact Form */
+#contact-form {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#contact-form h3 {
+    color: #2c5aa0;
+    margin-bottom: 10px;
+}
+
+#contact-form p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+form label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #eaeaea;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="tel"]:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #2c5aa0;
+    outline: none;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Submit Button */
+.btn {
+    background-color: #2c5aa0;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background-color: #1a3a5f;
+}
+
+/* Department Contacts */
+.department-contact {
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border-left: 3px solid #2c5aa0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.department-contact h4 {
+    color: #2c5aa0;
+    margin: 0 0 8px 0;
+    font-size: 16px;
+}
+
+.department-contact p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Emergency Contact */
+.emergency-contact {
+    background: linear-gradient(to right, #ff0000, #ff0000);
+    
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.emergency-contact h2 {
+    color: rgb(255, 255, 255);
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.emergency-contact p {
+    color: #fff;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.emergency-contact strong {
+    color: white;
+}
+
+/* ========================================= */
+/* MOBILE FIXES - WON'T AFFECT DESKTOP */
+/* ========================================= */
+
+/* Mobile styles (applies to screens 768px and smaller) */
+@media (max-width: 768px) {
+    /* Fix menu for mobile */
+    #menu {
+        height: auto;
+        padding: 10px 0;
+    }
+    
+    #menu ul {
+        flex-direction: column;
+    }
+    
+    #menu li {
+        margin: 5px 0;
+    }
+    
+    #menu a {
+        display: block;
+        margin: 0 10px;
+    }
+
+    /* Fix page layout for mobile */
+    #page {
+        flex-direction: column;
+        padding: 20px 15px;
+        gap: 20px;
+    }
+
+    /* Fix card layouts for mobile */
+    .featured-vehicles,
+    .grade-levels,
+    .photo-grid,
+    .news-grid {
+        justify-content: center;
+    }
+    
+    .vehicle-card,
+    .grade-card,
+    .photo-item,
+    .news-item {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* Fix process steps for mobile */
+    .process-steps {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .step {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* Fix footer for mobile */
+    #footer {
+        flex-direction: column;
+        gap: 25px;
+        padding: 30px 15px;
+    }
+}
+
+/* Small mobile adjustments (applies to screens 480px and smaller) */
+@media (max-width: 480px) {
+    #header h1 {
+        font-size: 36px;
+    }
+    
+    #header h3 {
+        font-size: 18px;
+    }
+    
+    #banner img {
+        height: 250px;
+    }
+}

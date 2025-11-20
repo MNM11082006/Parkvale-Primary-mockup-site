@@ -687,80 +687,83 @@ form textarea {
 /* MOBILE FIXES - WON'T AFFECT DESKTOP */
 /* ========================================= */
 
-/* Mobile styles (applies to screens 768px and smaller) */
+/* --- MOBILE FIXES --- */
 @media (max-width: 768px) {
-    /* Fix menu for mobile */
-    #menu {
-        height: auto;
-        padding: 10px 0;
-    }
-    
+
+    /* Keep menu readable */
     #menu ul {
         flex-direction: column;
-    }
-    
-    #menu li {
-        margin: 5px 0;
-    }
-    
-    #menu a {
-        display: block;
-        margin: 0 10px;
+        text-align: center;
+        gap: 10px;
     }
 
-    /* Fix page layout for mobile */
+    #menu ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    /* Header text resizing */
+    #header h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    #header h3 {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    /* Make banner image fit */
+    #banner img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* PAGE LAYOUT — stack content + sidebar */
     #page {
-        flex-direction: column;
-        padding: 20px 15px;
+        display: block;
+        width: 100%;
+    }
+
+    #content, 
+    #sidebar {
+        width: 100% !important;
+        padding: 0 15px;
+        margin: 0;
+    }
+
+    /* News grid responsive */
+    .news-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    /* Gallery grid responsive */
+    .photo-grid {
+        grid-template-columns: 1fr;
         gap: 20px;
     }
 
-    /* Fix card layouts for mobile */
-    .featured-vehicles,
-    .grade-levels,
-    .photo-grid,
-    .news-grid {
-        justify-content: center;
-    }
-    
-    .vehicle-card,
-    .grade-card,
-    .photo-item,
-    .news-item {
+    .photo-item img {
         width: 100%;
-        max-width: 400px;
+        height: auto;
+        border-radius: 5px;
     }
 
-    /* Fix process steps for mobile */
-    .process-steps {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .step {
-        width: 100%;
-        max-width: 400px;
+    /* Sidebar lists */
+    #sidebar ul.styled li {
+        margin-bottom: 10px;
     }
 
-    /* Fix footer for mobile */
+    /* Footer stacks */
     #footer {
-        flex-direction: column;
-        gap: 25px;
-        padding: 30px 15px;
+        display: block;
+        text-align: center;
     }
-}
 
-/* Small mobile adjustments (applies to screens 480px and smaller) */
-@media (max-width: 480px) {
-    #header h1 {
-        font-size: 36px;
-    }
-    
-    #header h3 {
-        font-size: 18px;
-    }
-    
-    #banner img {
-        height: 250px;
+    #footer > div {
+        width: 100%;
+        margin-bottom: 20px;
     }
 }
